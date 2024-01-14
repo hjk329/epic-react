@@ -165,3 +165,5 @@ export default App
     }
   }, [showChild])
 ```
+
+개발 모드에서와 프로덕션 모드에서의 플로우가 다름.
