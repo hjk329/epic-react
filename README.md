@@ -5,4 +5,4 @@
 - React Fundamental: 리액트 기본기
 - React Hooks: 리액트 훅
 
-- vite-project: 강의 내용을 실습하기 위한 미니 프로젝트
+- vite-project: 강의 내용을 실습한 미니 프로젝트
