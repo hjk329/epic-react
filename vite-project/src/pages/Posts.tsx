@@ -1,7 +1,7 @@
 import { usePosts } from "../posts/hooks/usePosts";
 
 const Posts = () => {
-  const { data: postsResponse } = usePosts();
+  const { data: postsResponse } = usePosts({ throwOnError: true });
 
   return (
     <div>

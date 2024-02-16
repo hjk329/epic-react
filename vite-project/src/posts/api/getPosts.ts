@@ -1,7 +1,7 @@
 import ky from "ky";
 import { z } from "zod";
 
-export const getPosts = async () => {
+export const getPosts = async (): Promise<PostResponse> => {
   const response = await ky
         .get("https://jsonplaceholder.typicode.com/posts")
         .json<PostResponse>();

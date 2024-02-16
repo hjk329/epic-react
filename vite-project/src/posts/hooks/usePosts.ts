@@ -3,7 +3,7 @@ import { getPosts } from "../api/getPosts";
 
 type Return = Awaited<ReturnType<typeof getPosts>>;
 
-const GET_POSTS_KEY = "posts";
+export const GET_POSTS_KEY = "posts";
 
 export const usePosts = (options?: UseQueryOptions<Return>): UseQueryResult<Return> => {
   return useQuery({
@@ -11,4 +11,4 @@ export const usePosts = (options?: UseQueryOptions<Return>): UseQueryResult<Retu
     queryFn: () => getPosts(),
     ...options,
   });
-};
+}
