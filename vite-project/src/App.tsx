@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import ErrorBoundary from "./common/ErrorBoundary";
+import ErrorBoundary from "./common/components/error/ErrorBoundary";
 import Posts from "./pages/Posts";
 
 function App() {
