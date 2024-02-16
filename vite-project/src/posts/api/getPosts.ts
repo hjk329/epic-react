@@ -2,22 +2,17 @@ import ky from "ky";
 import { z } from "zod";
 
 export const getPosts = async () => {
-    try {
-      const response = await ky
+  const response = await ky
         .get("https://jsonplaceholder.typicode.com/posts")
         .json<PostResponse>();
   
-      if (!response) throw new Error("No response");
+    if (!response) throw new Error("No response");
   
-      const typeValidatedResponse = PostResponseScheme.safeParse(response);
+    const typeValidatedResponse = PostResponseScheme.safeParse(response);
   
-      if (!typeValidatedResponse.success)
-        throw new Error(typeValidatedResponse.error.errors[0].message);
+    if (!typeValidatedResponse.success) throw new Error(typeValidatedResponse.error.errors[0].message);
   
-      return response;
-    } catch (error) {
-      console.error(error);
-    }
+    return response;
   };
 
   const PostScheme = z.object({
