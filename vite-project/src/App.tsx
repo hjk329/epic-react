@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import ErrorBoundary from "./common/components/error/ErrorBoundary";
 import Posts from "./pages/Posts";
 
-import { QueryClient, QueryClientProvider } from "react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const queryClient = new QueryClient();
 
