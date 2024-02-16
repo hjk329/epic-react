@@ -59,3 +59,11 @@ ExampleClass.instanceMethod(); // Uncaught TypeError: ExampleClass.instanceMetho
 ```
 
 # 에러바운더리는 왜 클래스 컴포넌트만 지원할까?
+리액트는 상태, 라이프 사이클 메소드를 클래스 컴포넌트에서 다루도록 설계했었다. 클래스 컴포넌트는 **`React.Component`** 를 상속 받는다.  
+
+`React.Component` 는 리액트의 핵심 API 를 담고 있는 클래스로, 리액트의 라이프 사이클 메소드가 포함된다.   
+따라서, `React.Component` 를 상속 받은 클래스는 (에러바운더리처럼) 리액트의 라이프 사이클 메소드를 컴포넌트 내부에서 상속 받아서 사용할 수 있다.  
+
+그에 반해 함수형 컴포넌트는 `React.Component` 를 직접 상속 받지 않는다.  
+함수형 컴포넌트는 단순히 `props` 를 넘겨 받아서 UI 를 그려주는 용도로 설계되었기 때문이다.  
+하지만, 리액트 16.8 이후에 `hooks` 의 등장으로 함수형 컴포넌트에서도 상태나 라이프 사이클 메소드를 구현할 수 있게 되었다. `useState`, `useEffect`, `useContext` 등등 ..  
