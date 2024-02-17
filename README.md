@@ -1,6 +1,6 @@
 # epic-react
 
-[Kent C. Dodds 의 Epic React 강의](https://epicreact.dev/learn) 를 듣고 정리했습니다.
+💡 [Kent C. Dodds 의 Epic React 강의](https://epicreact.dev/learn) 를 듣고 기억하고 싶은 내용을 정리했습니다.
 
 - React Fundamental: 리액트 기본기
 - React Hooks: 리액트 훅
