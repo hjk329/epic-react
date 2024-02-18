@@ -68,3 +68,27 @@ export default App
 그리고, 새로운 상태 값이 dispatch 에 직접 전달되고 있다. 
 
 이때 리듀서가 dispatch 에서 넘겨받은 값을 바로 반환하므로 `useState` 를 사용하던 기존 예제와 동일하게 동작한다.  
+
+혹은 아래와 같은 방법도 있겠다.  
+
+```jsx
+
+import * as React from 'react'
+
+function countReducer (count, step){
+  return count + step
+}
+
+function Counter({initialCount = 0, step = 1}) {
+  const [count, changeCount] = React.useReducer(countReducer, initialCount)
+  const increment = () => changeCount(step)
+  return <button onClick={increment}>{count}</button>
+}
+
+function App() {
+  return <Counter />
+}
+```
+
+dispatch 함수에 step 을 인자로 넘겨서 reducer 를 호출한다.  
+reducer 는 현재 state 와 dispatch 에서 넘겨준 액션 (step) 을 알고 있고, 우리가 원하는 것은 현재 state 가 step 만큼 더해지는 것이다.  
