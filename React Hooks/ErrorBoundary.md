@@ -88,3 +88,5 @@ componentDidCatch(error, info): 이 메소드는 에러가 발생한 후에 실�
 
 ---
 
+### react-error-boundary
+리액트가 제공하는 에러 바운더리와 같은 API 를 사용한 패키지도 있다: https://github.com/bvaughn/react-error-boundary
