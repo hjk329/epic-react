@@ -40,6 +40,17 @@ function useCounter() { // 이렇게 하면 호출하는 쪽에서는 CounterCon
 export {CounterProvider, useCounter}
 ```
 
+⬆️ 위와 같이 컨텍스트를 사용하는 훅을 별도로 생성하면 재사용성과 유연성을 향상할 수 있다.  
+
+1. useCounter 은 CounterContext 의 구현을 추상화한다. 호출하는 쪽에서는 ConterContext 를 사용하기 위한 중복 코드를 작성하지 않아도 된다.  
+
+2. CounterContext 의 내부 구현이 변경되어도 useCounter 훅을 사용하는 쪽은 영향을 받지 않는다. 모든 변경 사항은 useToggle 내부에서 처리될 수 있기 때문이다.  
+
+
+3. 서브 컴포넌트들이 컨텍스트 프로바이더로 랩핑되지 않았을때 에러 처리를 동일하게 할 수 있다.  
+
+4. useCounter 훅을 호출하는 쪽에서는 컴포넌트의 실제 로직에만 집중할 수 있고, 컨텍스트 사용의 세부 사항은 useCounter 훅 내부에 숨겨지기 때문에 컴포넌트의 코드가 더 읽기 쉽고 이해하기 쉬워진다.  
+
 ```javascript
 // src/screens/counter.js
 import {useCounter} from 'context/counter'
