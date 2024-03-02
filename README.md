@@ -5,5 +5,6 @@
 - React Fundamental: 리액트 기본기
 - React Hooks: 리액트 훅
 - Advanced React Hooks: 리액트 훅 심화
+- Advanced React Patterns: 리액트 심화 패턴
 
 - vite-project: 강의 내용을 실습한 미니 프로젝트
